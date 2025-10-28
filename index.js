@@ -1,4 +1,5 @@
 const express = require('express');
+const app = express();
 const bodyParser = require('body-parser');
 const db = require('./models');
 const PORT = process.env.PORT || 3000;
@@ -42,12 +43,12 @@ app.put('/komik/:id', async (req, res) => {
     const id = req.params.id;
     const data = req.body;
     try {
-        const komik = await db,komik.findBYPk(id);
+        const komik = await db.Komik.findByPk(id);
         if(!komik){
             return res.status(404).send({message: 'Komik not found'});
         }
         await komik.update(data);
-        res.send({masage: 'Komik berhasil di update'}, komik);
+        res.send({masage: 'Komik berhasil di update', komik});
     } catch (error) {
         res.status(500).send({message: error.message});
     }
