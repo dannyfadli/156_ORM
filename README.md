@@ -1,5 +1,5 @@
 #Post
-<img width="1919" height="1079" alt="Cuplikan layar 2025-10-28 152255" src="https://github.com/user-attachments/assets/11734f8c-2c50-4127-afb5-528a405c7004" />
+<img width="1916" height="1079" alt="image" src="https://github.com/user-attachments/assets/8bee7903-8933-4694-863d-0fc353e37a8b" />
 
 #Get
 <img width="1911" height="1079" alt="image" src="https://github.com/user-attachments/assets/0ad56c6f-ea64-4834-bbfb-9e578f915478" />
