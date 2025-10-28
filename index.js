@@ -11,10 +11,20 @@ app.listen(PORT, async () => {
 });
 
 db.sequelize.sync().then(() => {
-    app.listen(3000, () => {    
+    app.listen(PORT, () => {    
         console.log('Server Started');
     })
 })
     .catch((err) => {
         console.log('Error: ' + err);
 })
+
+app.post('/komiks', async (req, res) => {
+    const data =req.body;
+    try {
+        const komik = await db.Komik.create(data);
+        res.send(komik);
+    } catch (error) {
+        res.status(500).send({message: error.message});
+    }
+});
